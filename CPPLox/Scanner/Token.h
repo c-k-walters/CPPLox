@@ -65,9 +65,6 @@ public:
 		return tokenString(type) + " " + lexeme + " " + literal_text;
 	  }
 
-
-
-private:
 	TokenType type;
 	string lexeme;
 	any literal;

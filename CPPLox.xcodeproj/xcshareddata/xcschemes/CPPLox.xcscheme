@@ -55,6 +55,14 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
+            argument = "/Users/charleskelley/Development/CPPLox/CPPLox/Expr"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/charleskelley/Development/CPPLox/CPPLox/Expr/grammer.lang"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "/Users/charleskelley/Desktop/test.lox"
             isEnabled = "NO">
          </CommandLineArgument>

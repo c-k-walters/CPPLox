@@ -1,0 +1,4 @@
+Binary : Expr left, Token oprtr, Expr right
+Grouping : Expr expression
+Literal : Object value
+Unary : Token oprtr, Expr right

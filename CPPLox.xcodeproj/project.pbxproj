@@ -27,7 +27,10 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = CC5667A52CCA8F3F00077DA1 /* Sources */;
 			membershipExceptions = (
+				AST/GenerateAST.h,
+				"AST/String+Split.h",
 				ErrorHandler.h,
+				Expr/Expr.h,
 				Lox.h,
 				Scanner/Scanner.h,
 				Scanner/Token.h,

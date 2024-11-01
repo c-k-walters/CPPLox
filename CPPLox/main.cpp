@@ -6,7 +6,20 @@
 //
 
 #include "Lox.h"
+#include "GenerateAST.h"
+#include "Expr.h"
+
+#include <string>
+#include <vector>
+
 using namespace std;
+
+vector<string> loxGrammer = {
+	"Binary : Expr left, Token op, Expr right",
+	"Grouping : Expr expression",
+	"Literal : any value",
+	"Unary : Token op, Expr right"
+};
 
 int main(int argc, const char * argv[]) {
 	Lox lox;
@@ -20,4 +33,7 @@ int main(int argc, const char * argv[]) {
 		lox.runPrompt();
 	}
 	return lox.exitCode();
+
+//	GenerateAST generator;
+//	generator.defineAST(argv[1], "Expr", loxGrammer);
 }
