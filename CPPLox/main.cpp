@@ -8,6 +8,7 @@
 #include "Lox.h"
 #include "GenerateAST.h"
 #include "Expr.h"
+#include "Parser.h"
 
 #include <string>
 #include <vector>

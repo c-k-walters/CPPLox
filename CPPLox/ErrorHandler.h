@@ -11,11 +11,20 @@
 #include <iostream>
 #include <string>
 
+#include "Token.h"
+
 using namespace std;
 
 class ErrorHandler {
 public:
 	bool hadError = false;
+
+	void error(Token token, string message) {
+		if (token.type == END_OF_FILE)
+			report(token.line, " at end", message);
+		else
+			report(token.line, " at '" + token.lexeme + "'", message);
+	}
 
 	void error(int line, string error) {
 		report(line, "", error);

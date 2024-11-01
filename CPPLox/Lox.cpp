@@ -8,6 +8,8 @@
 #include "Lox.h"
 #include "Token.h"
 #include "Scanner.h"
+#include "Parser.h"
+#include "ASTPrinter.h"
 
 #include <fstream>
 #include <iostream>
@@ -57,9 +59,15 @@ void Lox::run(string source) {
 	Scanner scanner(source, errorHandler);
 	vector<Token> tokens = scanner.scanTokens();
 
-	for (auto t : tokens) {
-		cout << t.toString() << endl;
-	}
+	Parser parser = Parser(tokens, errorHandler);
+	shared_ptr<Expr> expression = parser.parse();
+
+	if (errorHandler.hadError)
+		return;
+
+	ASTPrinter printer;
+	cout << printer.print(expression) << endl;
+
 }
 
 int Lox::exitCode() {
